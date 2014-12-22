@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from fakeElement import Element
-from fakeServerLink import ServerLink
+from serverLink import ServerLink
 from fakeThermSensor import ThermSensor
 from time import sleep
 

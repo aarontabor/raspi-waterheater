@@ -1,7 +1,5 @@
 from w1thermsensor import W1ThermSensor
-
-tankSensorIds = []
-mixSensorIds = []
+from settings import tankSensorIds, mixSensorIds
 
 
 class ThermSensor:

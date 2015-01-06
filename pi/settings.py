@@ -15,7 +15,7 @@ Ensure that identification numbers are:
 
 Example:
   tankSensorIds = ['0001234abcd', '0005678bcde']
-  mixSensorIds = ['0001a2b3c4d']
+  outputSensorIds = ['0001a2b3c4d']
 '''
 tankSensorIds = []
-mixSensorIds = []
+outputSensorIds = []

@@ -1,19 +1,19 @@
 from w1thermsensor import W1ThermSensor
-from settings import tankSensorIds, mixSensorIds
+from settings import tankSensorIds, outputSensorIds
 
 
 class ThermSensor:
   def __init__(self):
     self.tankSensors = []
-    self.mixSensors = []
+    self.outputSensors = []
 
     for sensor in W1ThermSensor.get_available_sensors():
       if sensor.id in tankSensorIds:
         self.tankSensors.append(sensor)
-      elif sensor.id in mixSensorIds:
-        self.mixSensors.append(sensor)
+      elif sensor.id in outputSensorIds:
+        self.outputSensors.append(sensor)
 
-  def getMixTemperature(self):
+  def getOutputTemperature(self):
     pass
 
   def getTankTemperature(self):

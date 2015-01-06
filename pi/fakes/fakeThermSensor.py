@@ -2,13 +2,13 @@ from random import randint
 
 class ThermSensor:
   def __init__(self):
-    self.mixTemperature = 75
+    self.outputTemperature = 75
     self.tankTemperature = 90
 
-  def getMixTemperature(self):
-    self.mixTemperature = step(self.mixTemperature)
-    print 'current mix temperature: %d' % self.mixTemperature
-    return self.mixTemperature
+  def getOutputTemperature(self):
+    self.outputTemperature = step(self.outputTemperature)
+    print 'current output temperature: %d' % self.outputTemperature
+    return self.outputTemperature
 
 
   def getTankTemperature(self):

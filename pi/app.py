@@ -14,7 +14,7 @@ element = Element()
 
 while True:
   desiredTemp = serverLink.getDesiredTemperature()
-  mixedTemp = thermSensor.getMixTemperature() # rename this
+  outputTemp = thermSensor.getOutputTemperature()
   tankTemp = thermSensor.getTankTemperature()
 
   if tankTemp < desiredTemp:
@@ -22,7 +22,7 @@ while True:
   else:
     element.turnOff()
 
-  serverLink.postMixedTemp(mixedTemp)
+  serverLink.postOutputTemp(outputTemp)
   serverLink.postTankTemp(tankTemp)
 
   sleep(UPDATE_FREQUENCY_SECONDS)

@@ -11,7 +11,7 @@ class ServerLink:
     print 'desired temperature is: %d' % temperature
     return temperature
 
-  def postMixedTemp(self, temperature):
+  def postOutputTemp(self, temperature):
     pass
 
   def postTankTemp(self, temperature):

@@ -3,9 +3,8 @@
 from element import Element
 from serverLink import ServerLink
 from ThermSensor import ThermSensor
+from settings import heartbeat_seconds
 from time import sleep
-
-UPDATE_FREQUENCY_SECONDS = 20
 
 serverLink = ServerLink()
 thermSensor = ThermSensor()
@@ -25,5 +24,5 @@ while True:
   serverLink.postOutputTemp(outputTemp)
   serverLink.postTankTemp(tankTemp)
 
-  sleep(UPDATE_FREQUENCY_SECONDS)
+  sleep(heartbeat_seconds)
 

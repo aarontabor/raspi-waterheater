@@ -1,12 +1,11 @@
 from requests import get, post
-
-prefix = 'http://www.waterheater.com/waterheater'
+from settings import servername
 
 
 class ServerLink:
 
   def getDesiredTemperature(self):
-    response = get('%s/desiredTemperature.php' % prefix)
+    response = get('%s/desiredTemperature.php' % servername)
     temperature = int(response.text)
     print 'desired temperature is: %d' % temperature
     return temperature
@@ -16,4 +15,4 @@ class ServerLink:
 
   def postTankTemp(self, temperature):
     print 'sending tank temperature to server'
-    response = post('%s/tankTemperature.php' % prefix, data={'temperature': temperature})
+    response = post('%s/tankTemperature.php' % servername, data={'temperature': temperature})

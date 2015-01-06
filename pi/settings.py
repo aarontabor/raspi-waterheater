@@ -1,4 +1,16 @@
 '''
+This water heater daemon communicates with a server to:
+  - post temperature readings for storage and analysis
+  - query user-specified temperature settings
+'''
+# The servers network address (can be IP or a registered DNS)
+servername = ''
+
+# The amount of time (in seconds) between communications with the server
+heartbeat_seconds = 20
+
+
+'''
 Each DS18B20 temperature sensor has a unique identification number.
 Identification numbers can be found by connecting a single sensor to the
 raspberry pi and using the provided utility script:

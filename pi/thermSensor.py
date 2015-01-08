@@ -14,7 +14,8 @@ class ThermSensor:
         self.outputSensors.append(sensor)
 
   def getOutputTemperature(self):
-    pass
+    temperatures = [s.get_temperature() for s in self.outputSensors]
+    return average(temperatures)
 
   def getTankTemperature(self):
     temperatures = [s.get_temperature() for s in self.tankSensors]

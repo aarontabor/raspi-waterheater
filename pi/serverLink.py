@@ -11,7 +11,7 @@ class ServerLink:
     return temperature
 
   def postOutputTemp(self, temperature):
-    pass
+    response = post('%s/outputTemperature.php' % servername, data={'temperature': temperature})
 
   def postTankTemp(self, temperature):
     print 'sending tank temperature to server'

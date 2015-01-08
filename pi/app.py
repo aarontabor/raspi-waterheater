@@ -2,7 +2,7 @@
 
 from element import Element
 from serverLink import ServerLink
-from fakeThermSensor import ThermSensor
+from ThermSensor import ThermSensor
 from time import sleep
 
 UPDATE_FREQUENCY_SECONDS = 20

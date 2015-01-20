@@ -7,7 +7,6 @@ class ServerLink:
   def getDesiredTemperature(self):
     response = get('http://%s/desiredTemperature' % servername)
     temperature = int(response.text)
-    print 'desired temperature is: %d' % temperature
     return temperature
 
   def postOutputTemp(self, temperature):

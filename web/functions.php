@@ -1,19 +1,17 @@
 <?php
-$db_connection = new mysqli("localhost", "pi", "raspberry", "raspi_waterheater");
+$db_connection = new mysqli("localhost", "eedtech", "raspberry", "raspi_waterheater");
 
-$desiredTemperature_filename = '/tmp/.desiredTemperature';
 
 function getDesiredTemperature() {
-  $file = fopen($GLOBALS{'desiredTemperature_filename'}, 'r');
-  $temperature = fgets($file);
-  fclose($file);
-  return $temperature;
+  $conn = $GLOBALS{'db_connection'};
+  $result = $conn->query("SELECT temperature from desired_temperature where id = 1;");
+  $row = $result->fetch_assoc();
+  return $row['temperature'];
 }
 
 function setDesiredTemperature($temperature) {
-  $file = fopen($GLOBALS{'desiredTemperature_filename'}, 'w');
-  fwrite($file, $temperature);
-  fclose($file);
+  $conn = $GLOBALS{'db_connection'};
+  $conn->query("UPDATE desired_temperature SET temperature = " . $temperature . " where id = 1;");
 }
 
 function getTankTemperature() {

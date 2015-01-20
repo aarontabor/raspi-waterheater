@@ -14,3 +14,9 @@ CREATE TABLE output_temperatures(
   temperature DOUBLE NOT NULL,
   PRIMARY KEY (id)
 );
+
+CREATE TABLE desired_temperature(
+  id INT NOT NULL,
+  temperature DOUBLE NOT NULL,
+  PRIMARY KEY (id)
+);

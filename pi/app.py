@@ -5,11 +5,13 @@ from serverLink import ServerLink
 from ThermSensor import ThermSensor
 from settings import heartbeat_seconds
 from time import sleep
+from statusIndicator import statusOn
 
 serverLink = ServerLink()
 thermSensor = ThermSensor()
 element = Element()
 
+statusOn()
 
 while True:
   desiredTemp = serverLink.getDesiredTemperature()

@@ -2,16 +2,17 @@
 
 from element import Element
 from serverLink import ServerLink
-from ThermSensor import ThermSensor
+from thermSensor import ThermSensor
 from settings import heartbeat_seconds
 from time import sleep
-from statusIndicator import statusOn
+from statusIndicator import StatusIndicator
 
+statusIndicator = StatusIndicator()
 serverLink = ServerLink()
 thermSensor = ThermSensor()
 element = Element()
 
-statusOn()
+statusIndicator.statusOn()
 
 while True:
   desiredTemp = serverLink.getDesiredTemperature()

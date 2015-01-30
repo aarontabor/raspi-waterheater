@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sed -i 's!PATH!'$PWD'!' .S99.waterheater

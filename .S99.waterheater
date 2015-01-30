@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# This file was generated during installation process
+
+modprobe-w1-gpio
+modprobe-w1-therm
+sleep 10
+python PATH/pi/app.py

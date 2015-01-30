@@ -1,0 +1,4 @@
+To install:
+  Adjust pi/settings.py file
+  ./configure
+  sudo make install

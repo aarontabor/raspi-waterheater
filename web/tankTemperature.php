@@ -1,5 +1,5 @@
 <?php
-require('functions.php');
+require('functions_pgsql.php');
 
 switch($_SERVER{'REQUEST_METHOD'}) {
   case 'GET':

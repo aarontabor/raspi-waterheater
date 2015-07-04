@@ -5,12 +5,14 @@ from settings import servername
 class ServerLink:
 
   def getDesiredTemperature(self):
-    response = get('http://%s/desiredTemperature' % servername)
+    response = get('http://%s/desiredTemperature.php' % servername)
     temperature = int(response.text)
     return temperature
 
   def postOutputTemp(self, temperature):
-    response = post('http://%s/outputTemperature' % servername, data={'temperature': temperature})
+    response = post('http://%s/outputTemperature.php' % servername, data={'temperature': temperature})
+    print(response)
 
   def postTankTemp(self, temperature):
-    response = post('http://%s/tankTemperature' % servername, data={'temperature': temperature})
+    response = post('http://%s/tankTemperature.php' % servername, data={'temperature': temperature})
+    print(response)

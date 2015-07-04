@@ -20,3 +20,5 @@ CREATE TABLE desired_temperature(
   temperature DOUBLE NOT NULL,
   PRIMARY KEY (id)
 );
+
+INSERT INTO desired_temperature(id, temperature) VALUES (1, 0);
